@@ -1,9 +1,11 @@
-function App() {
-  return (
-    <div>
-      <h2>Hi there</h2>
-    </div>
-  );
-}
+import React from "react";
 
-export default App;
+class App extends React.Component {
+  render() {
+    window.navigator.geolocation.getCurrentPosition(
+      (position) => console.log(position),
+      (err) => console.log(err)
+    );
+    return <div>Latitude:</div>;
+  }
+}
